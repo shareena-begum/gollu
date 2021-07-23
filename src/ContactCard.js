@@ -1,21 +1,21 @@
 import React from "react"
 
 function ContactCard(props){
-    const styles = {
-        resizeMode: "cover",
-        height: 200,
-        width: 300
+
+    const styleObject = {
+        maxWidth: '20vw'
     }
+
     return(
-        <div className="contact-card">
-      <img 
-        style={{styles}} 
-        src="https://images.unsplash.com/photo-1551972251-12070d63502a?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1934&q=80"/>
-      <h3>Mr. Tiger</h3>
-      <p>Phone: +49154447856</p>
-      <p>Email:tiger@gmail.com</p>
+    <div>
+      <img style={styleObject} src= {props.contact.imgUrl}/>
+      <h3>{props.contact.name}</h3>
+      <p>Phone:{props.contact.phone}</p>
+      <p>Email:{props.contact.email}</p>
     </div>
     )
 }
+
+
 
 export default ContactCard
